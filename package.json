@@ -4,11 +4,12 @@
   "description": "Awesome app",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/pasever/houseofchores.git"
+    "url": "git+https://github.com/pasever/houseofchores.git"
   },
   "keywords": [],
   "author": "Team Seattle",
@@ -26,5 +27,9 @@
     "mysql2": "^1.5.1",
     "nodemon": "^1.12.5",
     "sequelize": "^4.27.0"
-  }
+  },
+  "bugs": {
+    "url": "https://github.com/pasever/houseofchores/issues"
+  },
+  "homepage": "https://github.com/pasever/houseofchores#readme"
 }
