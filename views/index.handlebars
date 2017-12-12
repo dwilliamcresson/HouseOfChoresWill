@@ -1,107 +1,109 @@
-<nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
-  <a class="navbar-brand" href="#">LogoHere</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
-  <span class="navbar-toggler-icon"></span>
-  </button>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>House of Chores</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+</head>
 
-  <div class="collapse navbar-collapse" id="navbarsExampleDefault">
-    <ul class="navbar-nav mr-auto">
-      <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="http://example.com" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Menu</a>
-        <div class="dropdown-menu" aria-labelledby="dropdown01">
-          <a class="dropdown-item" href="#">Action</a>
-          <a class="dropdown-item" href="#">Another action</a>
-          <a class="dropdown-item" href="#">Something else here</a>
-        </div>
-      </li>
-    </ul>
-    <form class="form-inline my-2 my-lg-0">
-      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Login</button>
-    </form>
-  </div>
-</nav>
+<div class="container">
+  <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+          </button>
+        <a class="navbar-brand" href="#">House of chores</a>
+      </div>
 
-<div class="container-fluid">
-  <div class="row">
-    <div class="col"><p>Current date/week data here</p></div>        
-  </div>
-  <div class="row">
-    <div class="col-9">
-      <div class="row">
-        <div class="col">
-          <div class="card">
-            <img class="card-img-top" src="profilePic.jpg" alt="Card image cap">
-            <div class="card-body">
-              <h4 class="card-text">257 pts</h4>
-            </div>
-            <ul class="list-group list-group-flush">
-              <li class="list-group-item bg-light">Chore 1</li>
-              <li class="list-group-item bg-light">Chore 2</li>
-              <li class="list-group-item bg-light">Chore 3</li>
+      <div id="navbar" class="navbar-collapse collapse">
+        <form class="navbar-form navbar-right" role="form">
+          <div class="btn-group">
+            <a class="navbar-brand dropdown-toggle dropdown" data-toggle="dropdown" href="#">Welcome, Gerald!</a>
+            <ul class="dropdown-menu" role="menu">
+              <li><a href="#">Menu</a></li>
+              <li><a href="#">My Inbox</a></li>
+              <li><a href="#">View Statistics</a></li>
+              <li class="divider"></li>
+              <li><a href="#">Log out</a></li>
             </ul>
-            <div class="card-body">
-              <a href="#" class="card-link text-success">Card link</a>
-              <a href="#" class="card-link text-success">Another link</a>
-            </div>
           </div>
-        </div>
-        <div class="col">
-          <div class="card">
-            <img class="card-img-top" src="profilePic.jpg" alt="Card image cap">
-            <div class="card-body">
-              <h4 class="card-text">257 pts</h4>
-            </div>
-            <ul class="list-group list-group-flush">
-              <li class="list-group-item bg-light">Chore 1</li>
-              <li class="list-group-item bg-light">Chore 2</li>
-              <li class="list-group-item bg-light">Chore 3</li>
-            </ul>
-            <div class="card-body">
-              <a href="#" class="card-link text-success">Card link</a>
-              <a href="#" class="card-link text-success">Another link</a>
-            </div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="card">
-            <img class="card-img-top" src="profilePic.jpg" alt="Card image cap">
-            <div class="card-body">
-              <h4 class="card-text">257 pts</h4>
-            </div>
-            <ul class="list-group list-group-flush">
-              <li class="list-group-item bg-light">Chore 1</li>
-              <li class="list-group-item bg-light">Chore 2</li>
-              <li class="list-group-item bg-light">Chore 3</li>
-            </ul>
-            <div class="card-body">
-              <a href="#" class="card-link text-success">Card link</a>
-              <a href="#" class="card-link text-success">Another link</a>
-            </div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="card">
-            <img class="card-img-top" src="profilePic.jpg" alt="Card image cap">
-            <div class="card-body">
-              <h4 class="card-text">257 pts</h4>
-            </div>
-            <ul class="list-group list-group-flush">
-              <li class="list-group-item bg-light">Chore 1</li>
-              <li class="list-group-item bg-light">Chore 2</li>
-              <li class="list-group-item bg-light">Chore 3</li>
-            </ul>
-            <div class="card-body">
-              <a href="#" class="card-link text-success">Card link</a>
-              <a href="#" class="card-link text-success">Another link</a>
-            </div>
-          </div>
-        </div>
-      </div>          
-    </div>
-    <div class="col bg-secondary">
-      <div class="row">
-        <div class="col"><h5>Side Bar Here For Voting and other shenanigans</h5></div>
+        </form>
       </div>
     </div>
+  </nav>
+</div>
+
+<div class="jumbotron">
+  <div class="container">
+    <h1>Hello, House!</h1>
+    <h2>Chores balance: $45.19</h2>
+    <div class="btn-group">
+      <button class="btn btn-default btn-xs dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    ASSIGN<span class="caret"></span>
+  </button>
+      <ul class="dropdown-menu">
+        <li><a href="#">1</a></li>
+        <li><a href="#">2</a></li>
+        <li><a href="#">3</a></li>
+      </ul>
+    </div>
+    
+    <div class="btn-group">
+      <button class="btn btn-default btn-xs dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    REDEEM<span class="caret"></span>
+  </button>
+      <ul class="dropdown-menu">
+        <li><a href="#">1</a></li>
+        <li><a href="#">2</a></li>
+        <li><a href="#">3</a></li>
+      </ul>
+    </div>
+  
+    <div class="btn-group">
+      <button class="btn btn-default btn-xs dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    OTHER<span class="caret"></span>
+  </button>
+      <ul class="dropdown-menu">
+        <li><a href="#">1</a></li>
+        <li><a href="#">2</a></li>
+        <li><a href="#">3</a></li>
+      </ul>
+    </div>
+  
+  </div>
+</div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-lg-3">
+
+      <div id="myDIV" class="header">
+        <h2 style="margin:5px">Gerald</h2>
+        <!-- <input type="text" id="myInput" placeholder="Title..."> -->
+        <!-- <span onclick="newElement()" class="addBtn">Add</span> -->
+      </div>
+
+      <ul id="myUL">
+        <li>Wash Dishes</li>
+        <li>Take out Garbage</li>
+        <!-- <li class="checked">Pay bills</li> -->
+        <li>Buy Grocery</li>
+        <li>Buy eggs</li>
+        <li>Trim Hedges</li>
+        <li>Do Laundry</li>
+      </ul>
+
+    </div>
+
+    <div class="col-lg-9">
+      <div id="container" class="right-block"></div>
+    </div>
+
+    <footer id="footer">
+      <hr>
+      <p> Team Seattle Project 2 &copy; 2017</p>
+    </footer>
   </div>
 </div>
