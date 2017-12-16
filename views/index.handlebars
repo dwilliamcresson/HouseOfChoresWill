@@ -37,70 +37,51 @@
 
 <div class="jumbotron">
   <div class="container">
-    <h1>Hello, House!</h1>
-    <h2>Chores balance: $45.19</h2>
-    <div class="btn-group">
-      <button class="btn btn-default btn-xs dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-    ASSIGN<span class="caret"></span>
-  </button>
-      <ul class="dropdown-menu">
-        <li><a href="#">1</a></li>
-        <li><a href="#">2</a></li>
-        <li><a href="#">3</a></li>
-      </ul>
-    </div>
-    
-    <div class="btn-group">
-      <button class="btn btn-default btn-xs dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-    REDEEM<span class="caret"></span>
-  </button>
-      <ul class="dropdown-menu">
-        <li><a href="#">1</a></li>
-        <li><a href="#">2</a></li>
-        <li><a href="#">3</a></li>
-      </ul>
-    </div>
-  
-    <div class="btn-group">
-      <button class="btn btn-default btn-xs dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-    OTHER<span class="caret"></span>
-  </button>
-      <ul class="dropdown-menu">
-        <li><a href="#">1</a></li>
-        <li><a href="#">2</a></li>
-        <li><a href="#">3</a></li>
-      </ul>
-    </div>
-  
+    <h2><b>Hello, House!</b></h2>
+    <!-- <h3>Chores balance: $45.19</h3> -->
+
+    <select class="selectpicker" id="sel1" style="font-size: 14px; border-radius: none">
+      <option>Pick a day</option>
+      <option value="1">Sunday</option>
+      <option value="2">Monday</option>
+      <option value="3">Tuesday</option>
+      <option value="4">Wednesday</option>
+      <option value="5">Thurday</option>
+      <option value="6">Friday</option>
+      <option value="7">Saturday</option>
+      <option value="8">Daily</option>
+    </select>
+
+    <select class="selectpicker" id="sel2" style="font-size: 14px; border-radius: 1px">
+      <option>Pick a task</option>
+      <option value="1">Wash Dishes</option>
+      <option value="2">Vacuum</option>
+      <option value="3">Take out Garbage</option>
+      <option value="4">Clean Bathrooms</option>
+      <option value="5">Cook</option>
+      <option value="6">Buy Grocery</option>
+      <option value="7">Do Laundry</option>
+      <option value="8">Mow Lawn</option>
+      <option value="9">Trim Hedges</option>
+    </select>
+
+    <button type="button" id="add-task" style="font-size: 13px; border-radius: 7px; padding-bottom: -2px">Add </button>
+    <button type="button" id="add-task" style="font-size: 13px; border-radius: 7px; padding-bottom: -2px">Add a task</button>
+    <button type="button" id="add-task" style="font-size: 13px; border-radius: 7px; padding-bottom: -2px">Redeem </button>
+    <button type="button" id="add-task" style="font-size: 13px; border-radius: 7px; padding-bottom: -2px">Other </button>
+
   </div>
 </div>
 
+
+
 <div class="container">
   <div class="row">
-    <div class="col-lg-3">
 
-      <div id="myDIV" class="header">
-        <h2 style="margin:5px">Gerald</h2>
-        <!-- <input type="text" id="myInput" placeholder="Title..."> -->
-        <!-- <span onclick="newElement()" class="addBtn">Add</span> -->
-      </div>
-
-      <ul id="myUL">
-        <li>Wash Dishes</li>
-        <li>Take out Garbage</li>
-        <!-- <li class="checked">Pay bills</li> -->
-        <li>Buy Grocery</li>
-        <li>Buy eggs</li>
-        <li>Trim Hedges</li>
-        <li>Do Laundry</li>
-      </ul>
-
-    </div>
-
-    <div class="col-lg-9">
+    <div class="col-lg-12">
       <div id="container" class="right-block"></div>
     </div>
-
+    {{ hbsObject }}
     <footer id="footer">
       <hr>
       <p> Team Seattle Project 2 &copy; 2017</p>
