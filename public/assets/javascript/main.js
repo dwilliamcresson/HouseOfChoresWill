@@ -24,19 +24,29 @@ $.ajax({method: "GET", url: "/api/chores"}).done(function(data) {
   
   for (j in choreArray) {
     
-    //console.log(j);
-    //console.log(choreArray[j]);
+    console.log(choreArray[j]);
+    
     
     for (a in choreArray[j]) {  
-      console.log(choreArray[j][a]);
+      if (!Array.isArray(choreArray[j][a])) continue; // Skips non-arrays
       
+      var tasks = [];
       
+      choreArray[j][a].map(function(item) {
+        tasks.push(item.taskname);
+      });
+      
+      choreArray[j][a] = tasks.join('<br>');
+      
+      /*
       for (b in choreArray[j][a]) {  
-        var zzz =choreArray[j][a][b]['taskname'];
+        var zzz = choreArray[j][a][b]['taskname'];
         //console.log(choreArray[j][a][b]['taskname']);
-      
+        
+      }
+      */
+    
     }
-  }
 
 }
   
@@ -90,37 +100,37 @@ $.ajax({method: "GET", url: "/api/chores"}).done(function(data) {
           cls: 'id-column-cls',
           align: 'center'
         }, {
-          index: `Monday[0].taskname`,  
+          index: `Monday`,
           title: 'Monday',
           align: 'center',
           cellAlign: 'center'
         }, {
-          index: 'Tuesday[0].taskname',
+          index: 'Tuesday',
           title: 'Tuesday',
           align: 'center',
           cellAlign: 'center'
         }, {
-          index: 'Wednesday[0].taskname',
+          index: 'Wednesday',
           title: 'Wednesday',
           align: 'center',
           cellAlign: 'center'
         }, {
-          index: 'Thursday[0].taskname',
+          index: 'Thursday',
           title: 'Thursday',
           align: 'center',
           cellAlign: 'center'
         }, {
-          index: 'Friday[0].taskname',
+          index: 'Friday',
           title: 'Friday',
           align: 'center',
           cellAlign: 'center'
         }, {
-          index: 'Saturday[0].taskname',
+          index: 'Saturday',
           title: 'Saturday',
           align: 'center',
           cellAlign: 'center'
         }, {
-          index: 'Sunday[0].taskname',
+          index: 'Sunday',
           title: 'Sunday',
           align: 'center',
           cellAlign: 'center'
