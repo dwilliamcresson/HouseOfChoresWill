@@ -19,7 +19,7 @@ var chores = {
     },
     // The variables cols and vals are arrays.
     create: function(cols, vals, cb) {
-        orm.create(table, cols, vals, function(res) {
+        orm.create('user_chores', cols, vals, function(res) {
             cb(res);
         });
     },
@@ -28,6 +28,8 @@ var chores = {
             cb(res);
         });
     }
+    
+    
 };
 
 // Export the database functions for the controller (catsController.js).

@@ -64,15 +64,15 @@ var orm = {
         var queryString = "INSERT INTO " + table;
 
         queryString += " (";
-        queryString += cols.toString();
+        queryString += printQuestionMarks(cols.length, true);
         queryString += ") ";
         queryString += "VALUES (";
-        queryString += printQuestionMarks(vals.length);
+        queryString += printQuestionMarks(vals.length, false);
         queryString += ") ";
 
         console.log(queryString);
 
-        connection.query(queryString, vals, function(err, result) {
+        connection.query(queryString, [...cols, ...vals], function(err, result) {
             if (err) {
                 throw err;
             }
@@ -101,3 +101,11 @@ var orm = {
 };
 
 module.exports = orm;
+
+function printQuestionMarks(length, doub) {
+  let qm = [];
+  for (let i = 0; i < length; i++) {
+    qm.push(doub ? '??' : '?');
+  }
+  return qm.join(', ');
+}

@@ -7,7 +7,7 @@ function distinct(chores) {
     "Wednesday",
     "Thursday",
     "Friday",
-    "Saturday",
+    "Saturday", 
     "Sunday"
   ];
   var table = {};
@@ -41,8 +41,8 @@ module.exports = (app) => {
       var formattedObj = {
         chores: formattedData
       };
-      console.log("***** Inside routes.js *******");
-      console.log(formattedObj);
+      //console.log("***** Inside routes.js *******");
+      //console.log(formattedObj);
 
       res.status(200).json(formattedObj);
 
@@ -82,5 +82,5 @@ module.exports = (app) => {
             console.log(hbsObject);
             res.render("index", hbsObject);
         });
-  });
+  });  
 }

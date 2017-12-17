@@ -42,14 +42,14 @@
 
     <select class="selectpicker" id="sel1" style="font-size: 14px; border-radius: none">
       <option>Pick a day</option>
-      <option value="1">Sunday</option>
-      <option value="2">Monday</option>
-      <option value="3">Tuesday</option>
-      <option value="4">Wednesday</option>
-      <option value="5">Thurday</option>
-      <option value="6">Friday</option>
-      <option value="7">Saturday</option>
-      <option value="8">Daily</option>
+      <option value="Sunday">Sunday</option>
+      <option value="Monday">Monday</option>
+      <option value="Tuesday">Tuesday</option>
+      <option value="Wednesday">Wednesday</option>
+      <option value="Thurday">Thurday</option>
+      <option value="Friday">Friday</option>
+      <option value="Saturday">Saturday</option>
+      <option value="Daily">Daily</option>
     </select>
 
     <select class="selectpicker" id="sel2" style="font-size: 14px; border-radius: 1px">
@@ -64,6 +64,8 @@
       <option value="8">Mow Lawn</option>
       <option value="9">Trim Hedges</option>
     </select>
+  
+    <input type="text" id="datepicker" placeholder="Task Date" action="/addtask" method="POST">
 
     <button type="button" id="add-task" style="font-size: 13px; border-radius: 7px; padding-bottom: -2px">Add </button>
     <button type="button" id="add-task" style="font-size: 13px; border-radius: 7px; padding-bottom: -2px">Add a task</button>
