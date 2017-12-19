@@ -1,38 +1,40 @@
-$( function() {
-   $( "#datepicker" ).datepicker();
- } );
+$(function() {
+  $("#datepicker").datepicker();
+});
 
 $('#add-task').on('click', function() {
 
   let day = $('#sel1').val();
   let task = $('#sel2').val();
   let taskDate = $('#datepicker').val();
-  let userID = 1;
+  let userID = 3;
   //console.log('Day', day);
   //console.log('Task', task);
   //console.log('Date', taskDate);
-  
+
   $.ajax({
-    method: "POST", 
+    method: "POST",
     url: "/api/addtask",
-    data: { 
-      day: day, 
-      task: task, 
+    data: {
+      day: day,
+      task: task,
       taskDate: taskDate,
       userID: userID
     }
-  }).done(function(data){
+  }).done(function(data) {
     loadTableData();
     console.log("Data sent: " + data);
-  }).fail(function(error){
+  }).fail(function(error) {
     console.log(error);
   });
 });
 
-
 function loadTableData() {
-  
-  $.ajax({method: "GET", url: "/api/chores"}).done(function(data) {
+
+  $.ajax({
+    method: "GET", 
+    url: "/api/chores"
+  }).done(function(data) {
     let choreArray = [];
     let choreObj = data['chores'];
 
@@ -54,7 +56,6 @@ function loadTableData() {
 
         choreArray[j][a] = tasks.join(',<br>');
       }
-
     }
 
     $('#container').empty();
@@ -65,7 +66,7 @@ function loadTableData() {
       barHeight: 37,
       titleHeight: 50,
       cellHeaderHeight: 40,
-      title: 'House of Chores Name',
+      title: 'House of Seattle',
       width: 1150,
       height: 565,
       panelBodyBorders: 50,
@@ -144,10 +145,7 @@ function loadTableData() {
         }
       ]
     });
-    
   });
-  
-  
 }
 
 $(function() {

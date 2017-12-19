@@ -7,7 +7,7 @@ function distinct(chores) {
     "Wednesday",
     "Thursday",
     "Friday",
-    "Saturday", 
+    "Saturday",
     "Sunday"
   ];
   var table = {};
@@ -54,33 +54,31 @@ module.exports = (app) => {
     //console.log("***** Inside routes.js *******");
     res.render('index');
 
-        chores.choreDays(function(data) {
-            var hbsObject = {
-                chores: data
-            };
-            // console.log("***** Inside routes.js *******");
-            // console.log(hbsObject);
-        });
+    chores.choreDays(function(data) {
+      var hbsObject = {
+        chores: data
+      };
+      // console.log("***** Inside routes.js *******");
+      // console.log(hbsObject);
+    });
 
-        chores.alltasks(function(data) {
-            var hbsObject = {
-                chores: data
-            };
-            // console.log("***** Inside routes.js *******");
-            // console.log(hbsObject);
-        });
-      
+    chores.alltasks(function(data) {
+      var hbsObject = {
+        chores: data
+      };
+      // console.log("***** Inside routes.js *******");
+      // console.log(hbsObject);
+    });
+  })
 
-    })
-
-    app.get("/", (req, res) => {
-        chores.all(function(data) {
-            var hbsObject = {
-                chores: data
-            };
-            console.log("***** Inside routes.js *******");
-            console.log(hbsObject);
-            res.render("index", hbsObject);
-        });
-  });  
+  app.get("/", (req, res) => {
+    chores.all(function(data) {
+      var hbsObject = {
+        chores: data
+      };
+      console.log("***** Inside routes.js *******");
+      console.log(hbsObject);
+      res.render("index", hbsObject);
+    });
+  });
 }
